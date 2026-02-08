@@ -59,17 +59,22 @@ function Home() {
             key={item.id || index}
             className="w-[300px] h-[450px] border-[2px] bg-orange-400 rounded-[15px] flex flex-col overflow-hidden "
           >
-            <div className="h-[240px] border-b-black basis-auto bg-amber-50 flex-grow overflow-hidden justify-items-center">
+            <div className="h-[270px] border-b-black  bg-white overflow-hidden justify-items-center">
               <img src={item.image} alt={item.title} className="h-[200px] " />
             </div>
-            <div className="h-[200px]  border-black basis-auto bg-white flex flex-col justify-between  ">
+            <div className="h-[150px]  border-black  bg-amber-50 flex flex-col   ">
               <p className="text-[21px]"> {item.title}</p>
+              <br />
 
-              <p className="text-[12px] overflow-scroll">{item.description}</p>
-              <div className="flex h-[30px] ">
-                <p className="bg-gray-300 w-[30%] text-center">{item.price}$</p>
-                <button className="bg-orange-400 flex-grow">Add to cart</button>
-              </div>
+              <p className="text-[12px] overflow-y-scroll">
+                {item.description}
+              </p>
+            </div>
+            <div className="flex h-[50px] ">
+              <p className="bg-gray-100 w-[30%] text-center pt-[8px]">
+                {item.price}$
+              </p>
+              <button className="bg-orange-400 flex-grow">Add to cart</button>
             </div>
           </div>
         ))}
